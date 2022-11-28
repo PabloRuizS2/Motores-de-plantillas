@@ -1,0 +1,23 @@
+{{> header}}
+<h2>Agregar productos</h2>
+    <form action="/productos" method="POST">
+        Producto:   <input type="text" placeholder="Producto" name="name">
+        Precio: <input type="text" placeholder="Precio" name="price">
+        Thumbnail:  <input type="text" placeholder="ruta a imagen" name="thumbnail">
+        <button type="submit">Enviar</button>
+    </form>
+<br>
+<h2> Listado de productos</h2>
+{{#if listExist}}
+    <ul>
+        {{#each Productos}}
+        <li class={{this.id}}> 
+            <p>Producto:{{this.name}}</p>
+            <p>Precio: {{this.price}}</p>
+            <p>ID de producto: {{this.id}}</p>
+        </li>
+        {{/each}}
+    </ul>
+{{/if}}
+<br>
+{{> footer}}

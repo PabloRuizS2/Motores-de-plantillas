@@ -1,0 +1,16 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Pug
+    body
+        h1 Formulario de ingreso de productos 
+            form(action="/productos" method="post")
+                h5 Producto:<input type="text", placeholder="Producto", name="name"/> 
+                h5 Precio:<input type="text", placeholder="Precio", name="price"/>
+                h5 Thumbnail: <input type="text", placeholder="Ruta a imagen del producto", name="tumbnail"/> 
+                button(type="submit") Enviar
+        
+        each prods in productos 
+        p= `Producto: ${prods.name}, Precio: ${prods.price}, ID: ${prods.id}`  
