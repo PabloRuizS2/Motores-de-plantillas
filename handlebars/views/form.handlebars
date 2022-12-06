@@ -1,0 +1,30 @@
+<h2>Ingrese Producto</h2>
+<section>
+  <form action="/api/productos/add" method="POST">
+    <div>
+      <label
+        for="name"
+      >Nombre:</label>
+      <input type="text" name="nombre"required />
+    </div>
+    <div>
+      <label
+        for="price"
+      >Precio:</label>
+      <input type="number" name="precio" required/>
+    </div>
+    <div>
+      <label for="picture">Foto
+        URL:</label>
+      <input type="url" name="img" required/>
+    </div>
+    <div>
+      <input type="submit"  value="Enviar" />
+    </div>
+  </form>
+  <div>
+     <a href="./">
+      <button>Ver Productos</button>
+    </a>
+  </div>
+</section>

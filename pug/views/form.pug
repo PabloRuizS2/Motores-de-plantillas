@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+
+        section
+            h2 agregar producto 
+
+            div
+                form(action='/api/productos/add' method='POST' )
+                    div
+                        label Nombre
+                        input.form-control(type='text' name='nombre' required)
+                    div
+                        label Precio
+                        input.form-control(type='number' name='precio' required)
+                    div
+                        label Foto URL
+                        input.form-control(type='url' name='img' required)
+                    div
+                        input.btn.btn-primary(type='submit' value='Enviar' )
+                div
+                    a(href="/api/productos")
+                        button.btn.btn-info Ver Productos

@@ -1,0 +1,1 @@
+[{"id":1,"nombre":"aaa","precio":"222","img":"https://www.bing.com/search?q=traductor&cvid=6ef9518fae6e4aaaa8137d92f667e449&aqs=edge.0.69i59j69i57j0l2j69i59j0l4.1074j0j1&pglt=675&FORM=ANNTA1&PC=HCTS"}]

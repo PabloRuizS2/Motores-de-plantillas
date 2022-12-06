@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar productos</title>
+</head>
+
+<body>
+
+    <section>
+        <h2 >Ingrese Producto</h2>
+        <form action='/api/productos/add' method='POST'>
+            <div>
+                <label for='name'>Nombre:</label>
+                <input require type='text' name='nombre' />
+            </div>
+            <div>
+                <label for='price'>Precio:</label>
+                <input type='number' name='precio' require />
+            </div>
+            <div>
+                <label for='picture'>Foto:</label>
+                <input type='url' name='img' require />
+
+            </div>
+            <div>
+                <input type='submit' value='Enviar' />
+            </div>
+        </form>
+        <div>
+            <a href="/api/productos">
+                <button>Ver Productos</button>
+            </a>
+        </div>
+    </section>
+</body>
+
+</html>

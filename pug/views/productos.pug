@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+
+    section
+        h2 Productos 
+        br  
+
+        a(href="./productos/add") 
+                button agregar productos 
+        if productos.length !== 0
+              table.table
+                thead.bg-secondary
+                    tr
+                        th #
+                        th Nombre
+                        th Precio
+                        th Foto
+                        
+                tbody
+                    each producto in productos
+                        tr
+                            td= producto.id
+                            td= producto.nombre
+                            td= producto.precio
+                            td
+                                img(src=producto.img width="15%" alt=producto.nombre)
+            
+
+             
+        else 
+          div   
+            h2 no hay productos
+            
